@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="又是一年端午节">
+<meta name="description" content="&amp;#x53C8;&amp;#x662F;&amp;#x4E00;&amp;#x5E74;&amp;#x7AEF;&amp;#x5348;&amp;#x8282;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="端午和arduino初学笔记">
 <meta property="og:url" content="http://yoursite.com/2016/06/09/端午/index.html">
 <meta property="og:site_name" content="Liuter's Blog">
-<meta property="og:description" content="又是一年端午节">
-<meta property="og:image" content="http://yoursite.com/http://cfgmi.img48.wal8.com/img48/549232_20160609132326/146544991805.jpg">
-<meta property="og:updated_time" content="2016-06-09T06:48:11.651Z">
+<meta property="og:description" content="&amp;#x53C8;&amp;#x662F;&amp;#x4E00;&amp;#x5E74;&amp;#x7AEF;&amp;#x5348;&amp;#x8282;">
+<meta property="og:image" content="http://image18.poco.cn/mypoco/myphoto/20160609/15/17929726120160609151409072.jpg?1360x768_120">
+<meta property="og:updated_time" content="2016-06-09T07:49:48.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="端午和arduino初学笔记">
-<meta name="twitter:description" content="又是一年端午节">
-<meta name="twitter:image" content="http://yoursite.com/http://cfgmi.img48.wal8.com/img48/549232_20160609132326/146544991805.jpg">
+<meta name="twitter:description" content="&amp;#x53C8;&amp;#x662F;&amp;#x4E00;&amp;#x5E74;&amp;#x7AEF;&amp;#x5348;&amp;#x8282;">
+<meta name="twitter:image" content="http://image18.poco.cn/mypoco/myphoto/20160609/15/17929726120160609151409072.jpg?1360x768_120">
 
 
 
@@ -107,7 +107,7 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: 6222963163915093000,
       author: '博主'
     }
   };
@@ -200,6 +200,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -216,6 +226,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -367,23 +387,22 @@
       
 
       
-        <blockquote class="blockquote-center"><br>又是一年端午节<br><img src="/http://cfgmi.img48.wal8.com/img48/549232_20160609132326/146544991805.jpg" class="full-image" alt="alt" title="端午"></blockquote>
-
+        <p><blockquote class="blockquote-center"><br>&#x53C8;&#x662F;&#x4E00;&#x5E74;&#x7AEF;&#x5348;&#x8282;<br><img src="http://image18.poco.cn/mypoco/myphoto/20160609/15/17929726120160609151409072.jpg?1360x768_120"></blockquote></p>
 <a id="more"></a>
-<pre><code>端午和家人一起在家吃粽子，挺幸福的。
+<pre><code>&#x7AEF;&#x5348;&#x548C;&#x5BB6;&#x4EBA;&#x4E00;&#x8D77;&#x5728;&#x5BB6;&#x5403;&#x7CBD;&#x5B50;&#xFF0C;&#x633A;&#x5E78;&#x798F;&#x7684;&#x3002;
 </code></pre><hr>
-<p>刚开始弄Arduino，一堆语法不会，手头有个MLX90614，它用TTL传输字符串，可是用Serial.read()出来总是十进制，后来查了下，原来是C语言规定 read( ) 是读取 Byte,但是回传 int。</p>
+<p>&#x521A;&#x5F00;&#x59CB;&#x5F04;Arduino&#xFF0C;&#x4E00;&#x5806;&#x8BED;&#x6CD5;&#x4E0D;&#x4F1A;&#xFF0C;&#x624B;&#x5934;&#x6709;&#x4E2A;MLX90614&#xFF0C;&#x5B83;&#x7528;TTL&#x4F20;&#x8F93;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53EF;&#x662F;&#x7528;Serial.read()&#x51FA;&#x6765;&#x603B;&#x662F;&#x5341;&#x8FDB;&#x5236;&#xFF0C;&#x540E;&#x6765;&#x67E5;&#x4E86;&#x4E0B;&#xFF0C;&#x539F;&#x6765;&#x662F;C&#x8BED;&#x8A00;&#x89C4;&#x5B9A; read( ) &#x662F;&#x8BFB;&#x53D6; Byte,&#x4F46;&#x662F;&#x56DE;&#x4F20; int&#x3002;</p>
 <pre><code>void loop() { 
-  while (Serial.available()>0){
+  while (Serial.available()&gt;0){
   Serial.println(Serial.read());
  }
-}当时因为用了Serial.read()，所以没法在串口读出字符串。</code></pre>
-于是便可用如下代码实现。
+}&#x5F53;&#x65F6;&#x56E0;&#x4E3A;&#x7528;&#x4E86;Serial.read()&#xFF0C;&#x6240;&#x4EE5;&#x6CA1;&#x6CD5;&#x5728;&#x4E32;&#x53E3;&#x8BFB;&#x51FA;&#x5B57;&#x7B26;&#x4E32;&#x3002;</code></pre>
+&#x53BB;&#x7F51;&#x4E0A;&#x641C;&#x7F57;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x53D1;&#x73B0;&#x53EF;&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x3002;
 
 <pre><code>void setup( ) {
  Serial.begin(9600);  
 }
- String Str="";
+ String Str=&quot;&quot;;
  void readLine( ); 
 void loop( ) {
    if(Serial.available( ) ) {
@@ -393,9 +412,9 @@ void loop( ) {
 void readLine( ) {
    int abc = Serial.read( );
    if(abc == -1) return;  
-   Str = ""; 
+   Str = &quot;&quot;; 
    while(38==38){  
-     if(abc == '\n') return; 
+     if(abc == &apos;\n&apos;) return; 
      Str += (char)abc;
      delay(2);
      abc = Serial.read( );
@@ -508,7 +527,7 @@ void readLine( ) {
                src="/images/avatar.jpeg"
                alt="Liuter" />
           <p class="site-author-name" itemprop="name">Liuter</p>
-          <p class="site-description motion-element" itemprop="description">记一小点日记</p>
+          <p class="site-description motion-element" itemprop="description">记些日记</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -520,10 +539,10 @@ void readLine( ) {
 
           
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
