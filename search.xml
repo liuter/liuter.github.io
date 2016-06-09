@@ -4,14 +4,55 @@
   
     
     <entry>
+      <title><![CDATA[端午和arduino初学笔记]]></title>
+      <url>http://yoursite.com/2016/06/09/%E7%AB%AF%E5%8D%88/</url>
+      <content type="html"><![CDATA[<blockquote class="blockquote-center"><br>又是一年端午节<br><img src="/http://cfgmi.img48.wal8.com/img48/549232_20160609132326/146544991805.jpg" class="full-image" alt="alt" title="端午"></blockquote>
+
+<a id="more"></a>
+<pre><code>端午和家人一起在家吃粽子，挺幸福的。
+</code></pre><hr>
+<p>刚开始弄Arduino，一堆语法不会，手头有个MLX90614，它用TTL传输字符串，可是用Serial.read()出来总是十进制，后来查了下，原来是C语言规定 read( ) 是读取 Byte,但是回传 int。</p>
+<pre><code>void loop() { 
+  while (Serial.available()>0){
+  Serial.println(Serial.read());
+ }
+}当时因为用了Serial.read()，所以没法在串口读出字符串。</code></pre>
+于是便可用如下代码实现。
+
+<pre><code>void setup( ) {
+ Serial.begin(9600);  
+}
+ String Str="";
+ void readLine( ); 
+void loop( ) {
+   if(Serial.available( ) ) {
+      readLine( );
+      Serial.println(Str);
+}
+void readLine( ) {
+   int abc = Serial.read( );
+   if(abc == -1) return;  
+   Str = ""; 
+   while(38==38){  
+     if(abc == '\n') return; 
+     Str += (char)abc;
+     delay(2);
+     abc = Serial.read( );
+     if(abc == -1) return; 
+   }
+}</code></pre>
+
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[First]]></title>
       <url>http://yoursite.com/2016/06/09/First/</url>
-      <content type="html"><![CDATA[<blockquote class="blockquote-center">第一次尝试做这个，终于作出半成品了，以后就用它记笔记吧。<br>    -Liuter    </blockquote>
+      <content type="html"><![CDATA[<blockquote class="blockquote-center">16年6月8日 星期三</blockquote>
 
 
 <a id="more"></a>
-<pre><code>16年6月9日 星期四
-放假了，去看了两场电影，高考已经开始，下次高考就该我们，现在的成绩不堪入目啊。
+<pre><code>放假了，去看了两场电影，高考已经开始，下次高考就该我们，现在的成绩不堪入目啊。
 是时候该加把劲努力了。
 </code></pre>]]></content>
     </entry>
